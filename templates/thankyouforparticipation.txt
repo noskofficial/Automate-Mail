@@ -1,0 +1,11 @@
+Dear {{.Name}}
+
+Congratulations on successfully completing the 3 Day Linux workshop for beginners! We hope the skills you’ve gained will be valuable in your future Linux adventures.
+
+If you have any questions or need further resources, feel free to reach out.
+
+Happy Learning!
+
+Cheers
+Abhilekh Gautam
+NOSK Team

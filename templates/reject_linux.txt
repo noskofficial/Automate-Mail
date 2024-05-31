@@ -1,0 +1,11 @@
+Hi {{.Name}},
+
+Thank you for your interest in the 3-Day Linux Workshop. Unfortunately, due to limited seating and resources, we are unable to accommodate you this time.
+
+We apologize for any inconvenience this may cause and appreciate your understanding. We will keep you informed about future workshops and events that you might be interested in.
+
+Thank you again for your enthusiasm and support.
+
+Cheers,
+Abhilekh Gautam
+NOSK Team

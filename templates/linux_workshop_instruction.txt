@@ -1,0 +1,24 @@
+Dear {{.Name}},
+
+Hope you're excited for the upcoming Linux workshop! To ensure we make the most of our time, please follow these instructions before attending:
+
+ 1.    Download an ISO file for any Linux distribution. We recommend Ubuntu for beginners.
+        64-bit PC (AMD64) desktop image (https://releases.ubuntu.com/jammy/ubuntu-22.04.4-desktop-amd64.iso)
+
+ 2.   Bring a USB drive (pendrive) with a minimum of 8GB storage.
+
+ 3.   If you plan to fully format your disk to install Linux, please back up all important data beforehand.
+
+ 4.   Download and install VirtualBox and Rufus (for Windows users):
+        Download VirtualBox: https://www.virtualbox.org/wiki/Downloads
+        Download Rufus: https://rufus.ie/en/
+
+Please ensure you have completed these steps before arriving. It's crucial for the smooth running of the workshop, so do not appear without having these installations done.
+
+Note: The workshop will start at 10:30 AM in BLOCK F, NCIT College.
+
+Also, please arrive on time so we can start promptly and cover everything as planned. See you there!
+
+Cheers,
+Abhilekh Gautam
+NOSK Team

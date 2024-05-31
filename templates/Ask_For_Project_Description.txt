@@ -1,0 +1,18 @@
+Dear {{.Name}},
+
+Thank You again for showing your interest in volunteering at NCIT HackFest 2024.
+
+You might not be aware about your responsibilities and all the stuffs going on currently, so we have planned
+a small session for you to clear all your doubts regarding the event
+so please join us tomorrow for the event.
+
+Event Detail:
+Date: 10 Jan, 2024 
+Time: 2 PM
+Venue: NOSK LAB, Room No 403 (IT Block)
+
+Hope to see you there.
+
+Cheers,
+Abhilekh Gautam
+NOSK Team
