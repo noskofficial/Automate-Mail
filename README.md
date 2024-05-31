@@ -13,6 +13,7 @@ SenderEmail=senderemailhere
 SenderPassword=senderpasswordhere
 EmailSubject="This is a test email"
 ```
+It represents the sender's `email` and `password` along with the `subject` of the email
 
 ### Adding Email Content
 It is recommended to add a `.txt` file in the template directory with the email contents.
