@@ -19,6 +19,15 @@ It represents the sender's `email` and `password` along with the `subject` of th
 It is recommended to add a `.txt` file in the template directory with the email contents.
 
 To access the name of the reciever use `{{.Name}}` anywhere within the template file.
+These templates are really powerful, you can do something like this as well:
+
+```
+{{if eq .Name "Abhilekh Gautam"}}
+Dear {{.Name}},   
+{{else}}
+Hi {{.Name}},
+{{end}}
+```
 
 ### Running the program 
 ```bash
