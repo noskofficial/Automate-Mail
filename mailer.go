@@ -12,13 +12,24 @@ import (
 	"github.com/joho/godotenv"
 )
 
+func print_usage_message() {
+   log.Printf("Error: Usage: %s <csv_file_path> --template <template_file_path>", os.Args[0])
+}
+
 func main() {
-	if len(os.Args) != 2 {
-		log.Printf("Error: Usage: %s <file_path>", os.Args[0])
+	if len(os.Args) != 4 {
+		print_usage_message();
 		return
 	}
+	// Check for --template
+        if os.Args[2] != "--template"{
+	  print_usage_message();
+	  return;
+	}
+
 	// Specify your CSV file path
 	csvFilePath := os.Args[1]
+        templateFilePath := os.Args[3]
 
 	// Read CSV file
 	records, err := readCSV(csvFilePath)
@@ -27,7 +38,7 @@ func main() {
 		return
 	}
 
-	err = godotenv.Load("cred.env")
+	err = godotenv.Load("config.env")
 	if err != nil {
 		log.Fatalf("Some error occured while reading the Env file. Err: %s", err)
 	}
@@ -37,15 +48,15 @@ func main() {
 	senderEmail := os.Getenv("SenderEmail")
 	senderPassword := os.Getenv("SenderPassword")
 
-	// Email template
-	subject := "3 Days Linux Workshop: Congratulations on Completing the Linux Workshop!"
+	// Email Subject
+	subject := os.Getenv("EmailSubject")
 
 	// Iterate through records and send emails
 	for _, record := range records {
 		// Extract necessary information from the CSV record
 		email := record[2]
 		name := record[1]
-		templateContent, err := readTemplate("./templates/thankyouforparticipation.txt")
+		templateContent, err := readTemplate(templateFilePath)
 		tmpl, err := template.New("emailTemplate").Parse(templateContent)
 		if err != nil {
 			log.Fatal("Something went wrong")
@@ -67,6 +78,7 @@ func main() {
 		}
 	}
 }
+
 func readTemplate(filePath string) (string, error) {
 	content, err := os.ReadFile(filePath)
 	if err != nil {
@@ -74,6 +86,7 @@ func readTemplate(filePath string) (string, error) {
 	}
 	return string(content), nil
 }
+
 func readCSV(filePath string) ([][]string, error) {
 	file, err := os.Open(filePath)
 	if err != nil {
